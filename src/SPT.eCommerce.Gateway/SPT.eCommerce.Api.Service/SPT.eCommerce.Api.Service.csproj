@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Verve.Utility.Core.ContractResult" Version="1.20201217.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SPT.eCommerce.Api.EntityStore\SPT.eCommerce.Api.EntityStore.csproj" />
+    <ProjectReference Include="..\SPT.eCommerce.Api.Entity\SPT.eCommerce.Api.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

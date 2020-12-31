@@ -1,0 +1,31 @@
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging.Configuration;
+
+namespace SPT.eCommerce.Api
+{
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+            .ConfigureLogging((ctx, logging)=>
+                {
+                    logging.ClearProviders();
+                    logging.AddConfiguration(ctx.Configuration.GetSection("Logging"));
+                }
+            )
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+}
