@@ -1,4 +1,4 @@
-# eCommerce demo project for Sharp Programmer Tutorial
+# eCommerce demo project for Sharp Programmer Tutorials
 ## Build Status:
 | Source | Badge |
 |--------|--------|
